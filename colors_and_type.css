@@ -1,0 +1,288 @@
+/* =====================================================================
+   TAIC Workshop — Colors & Type
+   Workshop: "Thinking about AI's Capability"
+   Host:     Gwangju Institute of Science and Technology (GIST)
+   ---------------------------------------------------------------------
+   Palette is anchored to GIST's brand red ("dynamism, passion, strength")
+   and neutral grays ("autonomy"), warmed up with a paper/cream background
+   so the system reads more like an academic journal than a tech product.
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  /* ---------------------------------------------------------------
+     CORE BRAND COLORS
+     GIST red is the hero. Use sparingly — for the wordmark, primary
+     CTAs, link underlines, and the occasional accent rule. Never
+     wallpaper a section in it.
+     --------------------------------------------------------------- */
+  --gist-red:        #D7172F;  /* primary brand red — warmer, brick-leaning  */
+  --gist-red-deep:   #A30E22;  /* hover / pressed                            */
+  --gist-red-soft:   #F6D9DD;  /* tinted backgrounds, badges                 */
+  --gist-red-ink:    #5C0A19;  /* red text on cream                          */
+
+  /* Supporting neutrals — GIST's "autonomy" grays                       */
+  --ink:             #161514;  /* near-black, primary text                */
+  --ink-2:           #2B2926;  /* secondary text                          */
+  --ink-3:           #5E5A55;  /* tertiary / metadata                     */
+  --ink-4:           #8A857E;  /* muted / placeholder                     */
+  --rule:            #DDD7CD;  /* hairlines, dividers                     */
+  --rule-strong:     #B8B1A4;  /* heavier dividers, borders               */
+
+  /* Surfaces — warm paper, not cold web-white                            */
+  --paper:           #F6F1E7;  /* primary cream surface                   */
+  --paper-2:         #EFE8DA;  /* recessed / alternate sections           */
+  --paper-3:         #E6DFCF;  /* inset cards, code blocks                */
+  --bone:            #FBF8F1;  /* lightest surface, cards on paper        */
+  --white:           #FFFFFF;  /* true white — used rarely                */
+
+  /* Deep / inverted surfaces (program details, footer, "after dark")    */
+  --night:           #15140F;  /* near-black with a warm cast             */
+  --night-2:         #221F19;  /* one step up                             */
+  --night-3:         #34302A;  /* cards on night                          */
+  --night-fg:        #F2EBDB;  /* paper-on-night text                     */
+  --night-fg-2:      #B5AC97;  /* secondary on night                      */
+
+  /* Accent — used once or twice per page, never as the hero             */
+  --signal:          #1D4E89;  /* "academic blue" for links/refs          */
+  --signal-soft:     #DDE5F0;  /* tinted bg for callouts                  */
+  --leaf:            #3C6E47;  /* success / accepted                      */
+  --amber:           #B8761F;  /* deadline / warning                      */
+
+  /* ---------------------------------------------------------------
+     SEMANTIC ROLES — prefer these in component code
+     --------------------------------------------------------------- */
+  --bg:              var(--paper);
+  --bg-elevated:     var(--bone);
+  --bg-recessed:     var(--paper-2);
+  --bg-inverse:      var(--night);
+
+  --fg:              var(--ink);
+  --fg-muted:        var(--ink-3);
+  --fg-subtle:       var(--ink-4);
+  --fg-inverse:      var(--night-fg);
+
+  --accent:          var(--gist-red);
+  --accent-hover:    var(--gist-red-deep);
+  --accent-soft:     var(--gist-red-soft);
+
+  --border:          var(--rule);
+  --border-strong:   var(--rule-strong);
+  --link:            var(--gist-red);
+  --link-visited:    var(--gist-red-ink);
+
+  /* ---------------------------------------------------------------
+     TYPE FAMILIES
+     - Serif display:  Source Serif 4 (variable, optical size).
+       Editorial, restrained, good for long titles and research copy.
+     - Sans body:      IBM Plex Sans — technical-humanist, science-y.
+     - Mono:           IBM Plex Mono — for code, IDs, dates, kickers.
+     --------------------------------------------------------------- */
+  --font-serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --font-sans:  "IBM Plex Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono:  "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Type scale — generous, editorial. Optimized for 1200–1440 layouts.  */
+  --fs-hero:    clamp(3.5rem, 6vw, 6.5rem);   /* 56 → 104  */
+  --fs-display: clamp(2.75rem, 4.5vw, 4.5rem);/* 44 →  72  */
+  --fs-h1:      clamp(2.25rem, 3.4vw, 3.25rem); /* 36 → 52 */
+  --fs-h2:      clamp(1.75rem, 2.4vw, 2.25rem); /* 28 → 36 */
+  --fs-h3:      1.5rem;                       /* 24       */
+  --fs-h4:      1.25rem;                      /* 20       */
+  --fs-lead:    1.25rem;                      /* 20       */
+  --fs-body:    1.0625rem;                    /* 17       */
+  --fs-sm:      0.9375rem;                    /* 15       */
+  --fs-xs:      0.8125rem;                    /* 13       */
+  --fs-kicker:  0.75rem;                      /* 12 — uppercase mono     */
+
+  --lh-tight:   1.08;
+  --lh-snug:    1.2;
+  --lh-normal:  1.45;
+  --lh-prose:   1.6;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:  0.04em;
+  --tracking-kicker: 0.14em;
+
+  /* ---------------------------------------------------------------
+     SPACING — 4pt base, named scale
+     --------------------------------------------------------------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+
+  /* ---------------------------------------------------------------
+     RADII — small, restrained. Workshop / academic feel = mostly square.
+     --------------------------------------------------------------- */
+  --r-0: 0;
+  --r-1: 2px;     /* hairline corners on inputs */
+  --r-2: 4px;     /* default for buttons / chips */
+  --r-3: 8px;     /* cards */
+  --r-4: 14px;    /* large cards */
+  --r-pill: 999px;
+
+  /* ---------------------------------------------------------------
+     SHADOWS — soft, low contrast (we're on cream, not white).
+     --------------------------------------------------------------- */
+  --shadow-1: 0 1px 0 rgba(22, 21, 20, 0.04), 0 1px 2px rgba(22, 21, 20, 0.06);
+  --shadow-2: 0 1px 0 rgba(22, 21, 20, 0.04), 0 4px 14px rgba(22, 21, 20, 0.08);
+  --shadow-3: 0 2px 0 rgba(22, 21, 20, 0.04), 0 12px 32px rgba(22, 21, 20, 0.12);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(22, 21, 20, 0.04);
+
+  /* Containers */
+  --container-narrow: 720px;
+  --container:        1080px;
+  --container-wide:   1320px;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:      120ms;
+  --dur-base:      200ms;
+  --dur-slow:      400ms;
+}
+
+/* =====================================================================
+   SEMANTIC TYPE STYLES
+   ===================================================================== */
+html { color-scheme: light; }
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-prose);
+  color: var(--fg);
+  background: var(--bg);
+  font-feature-settings: "ss01", "ss02", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.hero, h1.hero {
+  font-family: var(--font-serif);
+  font-size: var(--fs-hero);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  font-weight: 380;             /* variable axis — slightly lighter than 400 */
+  font-variation-settings: "opsz" 60;
+  color: var(--fg);
+  text-wrap: balance;
+}
+.hero em, h1.hero em {
+  font-style: italic;
+  font-weight: 360;
+  color: var(--accent);
+}
+
+.display, h1.display {
+  font-family: var(--font-serif);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  font-weight: 400;
+  font-variation-settings: "opsz" 48;
+  text-wrap: balance;
+}
+
+h1, .h1 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-snug);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  font-variation-settings: "opsz" 36;
+  text-wrap: balance;
+}
+h2, .h2 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 28;
+  text-wrap: balance;
+}
+h3, .h3 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-snug);
+  font-weight: 600;
+}
+
+.lead {
+  font-family: var(--font-serif);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-prose);
+  color: var(--fg-muted);
+  font-weight: 400;
+  font-variation-settings: "opsz" 24;
+  text-wrap: pretty;
+}
+
+p, .p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-prose);
+  color: var(--fg);
+  text-wrap: pretty;
+}
+
+.small, small { font-size: var(--fs-sm); line-height: 1.5; }
+.meta {
+  font-size: var(--fs-xs);
+  color: var(--fg-muted);
+  letter-spacing: 0.01em;
+}
+
+.kicker, .eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-kicker);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--fg-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 18px; height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+code, kbd, samp, .code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--paper-3);
+  border: 1px solid var(--border);
+  padding: 0.08em 0.34em;
+  border-radius: var(--r-1);
+}
+
+a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent-hover); text-decoration-thickness: 2px; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: var(--s-6) 0;
+}
+
+::selection { background: var(--gist-red); color: var(--bone); }

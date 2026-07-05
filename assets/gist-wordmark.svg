@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" fill="none">
+  
+  <g>
+    
+    <g>
+      <circle cx="40" cy="40" r="28" fill="none" stroke="#C8102E" stroke-width="6"></circle>
+      <rect x="40" y="36" width="22" height="8" fill="#C8102E"></rect>
+      <rect x="54" y="36" width="8" height="20" fill="#C8102E"></rect>
+    </g>
+    
+    <text x="84" y="48" font-family="&#39;Source Serif 4&#39;, &#39;Source Serif Pro&#39;, Georgia, serif" font-weight="600" font-size="28" fill="#2B2926" letter-spacing="0.02em">GIST</text>
+    <text x="84" y="64" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="8" fill="#5E5A55" letter-spacing="0.14em">GWANGJU INSTITUTE OF</text>
+    <text x="84" y="73" font-family="&#39;IBM Plex Mono&#39;, monospace" font-size="8" fill="#5E5A55" letter-spacing="0.14em">SCIENCE AND TECHNOLOGY</text>
+  </g>
+</svg>
