@@ -2,7 +2,7 @@
    Tokens come from colors_and_type.css. This file adds layout +
    component styles that wouldn't make sense to bake into the token file. */
 
-@import url("./colors_and_type.css?v=30");
+@import url("./colors_and_type.css?v=31");
 
 /* Additional fonts for theme variants. */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
@@ -2712,4 +2712,53 @@ body[data-abstract="sans-card"] .program-row__detail p::first-letter {
 
   /* Venue map shorter on phone. */
   .venue-map-iframe, .venue-map-static { aspect-ratio: 1 / 1; }
+}
+
+/* ---------- ABOUT THANKS LINK (post-event) ---------- */
+.about-thanks {
+  margin-top: 44px !important;
+  position: relative;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 19px !important;
+  color: var(--ink) !important;
+}
+.about-thanks .about-recap-link { text-decoration-color: var(--rule-strong); }
+.about-recap-link {
+  color: var(--gist-red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.about-recap-link:hover { text-decoration-color: var(--gist-red); }
+
+/* ---------- RECAP (post-event closing band) ---------- */
+.recap-section { background: var(--bg); padding-top: 8px; padding-bottom: 48px; }
+.recap-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.recap-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+}
+.recap-figure figcaption {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--ink-3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.recap-figure figcaption .sep { color: var(--rule-strong); opacity: 0.7; }
+@media (max-width: 640px) {
+  .recap-figure figcaption { font-size: 11px; gap: 6px; }
 }

@@ -766,7 +766,8 @@ Object.assign(window, {
 /* About — workshop description + three topics (pillars or questions). */
 function About({
   aboutStyle,
-  lang
+  lang,
+  onSectionClick
 }) {
   const pillars = lang === 'kr' ? [{
     n: '01',
@@ -824,7 +825,17 @@ function About({
     className: "container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "about-grid"
-  }, /*#__PURE__*/React.createElement("div", null, lang === 'kr' ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("p", null, "AI의 capability가 오늘 어디까지 와 있고, 앞으로 어디로 향하는지 함께 짚어보고자 연구자들을 초대합니다. GIST AI Days의 일환으로 진행되는 이번 워크샵에서는 open-endedness, self-evolving agents, alignment, intelligence를 중심으로 현재의 질문들을 다룹니다. 열린 교류와 새로운 만남이 있는 하루를 기대합니다.")) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("p", null, "We bring together researchers to discuss where AI capabilities stand today and where they may be heading. Held as part of GIST AI Days, this workshop explores current questions on open-endedness, self-evolving agents, alignment, and intelligence. We look forward to a day of open exchange and new connections."))), !useInline && /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, lang === 'kr' ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("p", null, "AI의 capability가 오늘 어디까지 와 있고, 앞으로 어디로 향하는지 함께 짚어보고자 연구자들을 초대했습니다. GIST AI Days의 일환으로 진행된 이번 워크샵에서는 open-endedness, self-evolving agents, alignment, intelligence를 중심으로 현재의 질문들을 다뤘습니다."), /*#__PURE__*/React.createElement("p", {
+    className: "about-thanks"
+  }, /*#__PURE__*/React.createElement("a", {
+    className: "about-recap-link",
+    onClick: () => onSectionClick('recap')
+  }, "함께해 주셔서 감사합니다!"))) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("p", null, "We bring together researchers to discuss where AI capabilities stand today and where they may be heading. Held as part of GIST AI Days, this workshop explores current questions on open-endedness, self-evolving agents, alignment, and intelligence."), /*#__PURE__*/React.createElement("p", {
+    className: "about-thanks"
+  }, /*#__PURE__*/React.createElement("a", {
+    className: "about-recap-link",
+    onClick: () => onSectionClick('recap')
+  }, "Thank you for joining us!")))), !useInline && /*#__PURE__*/React.createElement("div", {
     className: "pillars"
   }, useQuestions ? questions.map((p, i) => /*#__PURE__*/React.createElement("div", {
     className: "pillar question",
@@ -1590,6 +1601,48 @@ function Organizers({
 }
 Object.assign(window, {
   Organizers
+});
+
+/* ===== Recap.jsx ===== */
+/* Recap — post-event closing band with a single from-behind room photo. */
+function Recap({
+  lang
+}) {
+  return /*#__PURE__*/React.createElement("section", {
+    id: "recap",
+    className: "recap-section",
+    "data-screen-label": "Recap"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "section-header",
+    style: {
+      marginBottom: 32
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "tick"
+  }), /*#__PURE__*/React.createElement("h2", null, lang === 'kr' ? '함께해 주셔서 감사합니다!' : 'Thank you for joining!'), /*#__PURE__*/React.createElement("p", {
+    className: "deck",
+    style: {
+      marginTop: 12,
+      fontStyle: 'normal',
+      fontFamily: 'var(--font-sans)',
+      fontSize: 16,
+      color: 'var(--ink-2)',
+      maxWidth: 560
+    }
+  }, lang === 'kr' ? '400명이 넘는 신청, 아홉 개의 발표, 그리고 열린 교류의 하루 — 연사와 참가자 여러분 모두 감사합니다.' : 'Over 400 registrations, nine talks, and a day of open exchange — thank you to our speakers and everyone who took part.')), /*#__PURE__*/React.createElement("figure", {
+    className: "recap-figure"
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "assets/recap-photo.jpg?v=2",
+    alt: "A full room of attendees during a talk at the workshop, Spaceshare Samseong COEX Center, Seoul",
+    loading: "lazy",
+    width: "2400",
+    height: "768"
+  }))));
+}
+Object.assign(window, {
+  Recap
 });
 
 /* ===== FooterBar.jsx ===== */
