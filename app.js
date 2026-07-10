@@ -1117,16 +1117,9 @@ function Program({
     className: "callout-agi reception"
   }, /*#__PURE__*/React.createElement("div", {
     className: "time"
-  }, "18:30 ", /*#__PURE__*/React.createElement("span", {
-    className: "till"
-  }, "—")), /*#__PURE__*/React.createElement("div", {
+  }, "18:30"), /*#__PURE__*/React.createElement("div", {
     className: "body"
-  }, /*#__PURE__*/React.createElement("h4", null, lang === 'kr' ? '워크샵 디너' : 'Workshop dinner'), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
-    className: "callout-rsvp",
-    href: "https://luma.com/nd8n763r",
-    target: "_blank",
-    rel: "noreferrer"
-  }, lang === 'kr' ? '디너 신청' : 'RSVP for dinner', " →"))))));
+  }, /*#__PURE__*/React.createElement("h4", null, lang === 'kr' ? '워크샵 뒤풀이' : 'Workshop afterparty')))));
 }
 Object.assign(window, {
   Program

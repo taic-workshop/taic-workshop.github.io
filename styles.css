@@ -2,7 +2,7 @@
    Tokens come from colors_and_type.css. This file adds layout +
    component styles that wouldn't make sense to bake into the token file. */
 
-@import url("./colors_and_type.css?v=31");
+@import url("./colors_and_type.css?v=32");
 
 /* Additional fonts for theme variants. */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
