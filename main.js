@@ -115,7 +115,7 @@
         registerMode: registerMode,
         lumaEventId: LUMA_EVENT_ID,
       }),
-      e(window.About, { aboutStyle: 'questions', lang: lang }),
+      e(window.About, { aboutStyle: 'questions', lang: lang, onSectionClick: scrollTo }),
       e(window.Program, {
         lang: lang,
         onSpeakerClick: function (id) {
@@ -131,6 +131,7 @@
         registerMode: registerMode,
         lumaEventId: LUMA_EVENT_ID,
       }),
+      e(window.Recap, { lang: lang }),
       e(window.FooterBar, { lang: lang }),
       e(window.BioDrawer, {
         speaker: bio,
